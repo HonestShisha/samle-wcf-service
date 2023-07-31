@@ -4,34 +4,47 @@ namespace CustomerService.Services.Customers
 {
 	internal class CustomerService : ICustomerService
 	{
+		ICustomerRepository _customers;
+
+		public CustomerService(ICustomerRepository repository)
+		{
+			_customers = repository;
+		}
+
 		public void Add(Customer customer)
 		{
-			throw new NotImplementedException();
+			_customers.Add(customer);
 		}
 
 		public void Delete(Guid id)
 		{
-			throw new NotImplementedException();
+			_customers.Delete(id);
 		}
 
 		public IEnumerable<Customer> Find(Func<Customer, bool> predicate)
 		{
-			throw new NotImplementedException();
+			return _customers.Find(predicate);
 		}
 
-		public Customer? Get(Guid id)
+		public Customer Get(Guid id)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				return _customers.Get(id);
+			} catch (Exception ex)
+			{
+				throw new FaultException(ex.ToString());
+			}
 		}
 
 		public IEnumerable<Customer> GetAll()
 		{
-			throw new NotImplementedException();
+			return _customers.GetAll();
 		}
 
 		public void Update(Customer customer)
 		{
-			throw new NotImplementedException();
+			_customers.Update(customer);
 		}
 	}
 }
