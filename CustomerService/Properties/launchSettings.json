@@ -1,0 +1,17 @@
+{
+	"profiles": {
+		"CustomerService2": {
+			"commandName": "Project",
+			"environmentVariables": {
+				"ASPNETCORE_ENVIRONMENT": "Development"
+			},
+			"applicationUrl": "https://localhost:7267;http://localhost:5064"
+		},
+		"Docker": {
+			"commandName": "Docker",
+			"launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+			"publishAllPorts": true,
+			"useSSL": true
+		}
+	}
+}
