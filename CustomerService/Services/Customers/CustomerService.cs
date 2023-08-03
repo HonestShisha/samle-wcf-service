@@ -2,7 +2,7 @@
 
 namespace CustomerService.Services.Customers
 {
-	internal class CustomerService : ICustomerService
+	internal class CustomerService : ICustomersService
 	{
 		ICustomerRepository _customers;
 

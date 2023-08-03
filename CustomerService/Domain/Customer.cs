@@ -3,7 +3,7 @@
 namespace CustomerService.Domain
 {
 	[DataContract]
-	internal class Customer
+	public class Customer
 	{
 		[DataMember]
 		[AllowNull]
