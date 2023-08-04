@@ -8,8 +8,6 @@ namespace CustomerService.Services.Customers
 
 		public IEnumerable<Customer> GetAll();
 
-		public IEnumerable<Customer> Find(Func<Customer, bool> predicate);
-
 		public void Update(Customer customer);
 
 		public void Delete(Guid id);

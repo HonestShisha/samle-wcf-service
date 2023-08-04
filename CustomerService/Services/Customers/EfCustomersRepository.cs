@@ -28,12 +28,6 @@ namespace CustomerService.Services.Customers
 			db.SaveChanges();
 		}
 
-		public IEnumerable<Customer> Find(Func<Customer, bool> predicate)
-		{
-			using var db = _customerContextFactory.CreateDbContext();
-			return db.Customers.Where(predicate);
-		}
-
 		public Customer Get(Guid id)
 		{
 			using var db = _customerContextFactory.CreateDbContext();

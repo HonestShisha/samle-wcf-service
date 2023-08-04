@@ -58,11 +58,6 @@ namespace CustomerService.Services.Customers
 			}
 		}
 
-		public IEnumerable<Customer> Find(Func<Customer, bool> predicate)
-		{
-			return _customers.Where(predicate);
-		}
-
 		public Customer Get(Guid id)
 		{
 			return _customers.FirstOrDefault(x => x.Id == id) ?? throw new Exception($"Клиент с id = {id} не найден.");

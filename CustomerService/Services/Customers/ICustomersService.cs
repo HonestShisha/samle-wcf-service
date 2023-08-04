@@ -12,9 +12,6 @@ namespace CustomerService.Services.Customers
 		IEnumerable<Customer> GetAll();
 
 		[OperationContract]
-		IEnumerable<Customer> Find(Func<Customer, bool> predicate);
-
-		[OperationContract]
 		void Update(Customer customer);
 
 		[OperationContract]

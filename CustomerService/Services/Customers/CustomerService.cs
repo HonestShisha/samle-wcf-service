@@ -21,11 +21,6 @@ namespace CustomerService.Services.Customers
 			_customers.Delete(id);
 		}
 
-		public IEnumerable<Customer> Find(Func<Customer, bool> predicate)
-		{
-			return _customers.Find(predicate);
-		}
-
 		public Customer Get(Guid id)
 		{
 			try
